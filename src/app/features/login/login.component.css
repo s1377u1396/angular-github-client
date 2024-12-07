@@ -1,0 +1,75 @@
+/* استایل کانتینر کلی */
+.login-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* تمام ارتفاع صفحه */
+    background: linear-gradient(135deg, #2c3e50, #3498db); /* گرادیانت زیبا */
+    padding: 20px;
+  }
+  
+  /* استایل کارت لاگین */
+  .login-card {
+    width: 100%;
+    max-width: 400px; /* عرض محدود */
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    background-color: #ffffff; /* پس‌زمینه سفید */
+    text-align: center;
+  }
+  
+  .login-card mat-card-title {
+    margin-bottom: 16px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #2c3e50; /* رنگ عنوان */
+  }
+  
+  /* استایل فرم */
+  .login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px; /* فاصله بین عناصر فرم */
+  }
+  
+  .login-form mat-form-field {
+    width: 100%; /* عرض فرم */
+  }
+  
+  .login-form button {
+    margin-top: 8px;
+  }
+  
+  /* استایل کارت اطلاعات کاربر */
+  .user-info-card {
+    width: 100%;
+    max-width: 400px; /* عرض محدود */
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    background-color: #ffffff; /* پس‌زمینه سفید */
+  }
+  
+  .user-info-card mat-card-title {
+    margin-bottom: 16px;
+    font-size: 20px;
+    color: #2c3e50; /* رنگ عنوان */
+  }
+  
+  .user-info-card p {
+    margin: 8px 0;
+    color: #34495e; /* رنگ متن */
+  }
+  
+  .user-info-card a {
+    color: #3498db;
+    text-decoration: none;
+  }
+  
+  .user-info-card a:hover {
+    text-decoration: underline;
+  }
+  

@@ -1,0 +1,38 @@
+<div class="home-container">
+    <header class="hero-section">
+      <h1 class="main-title">Welcome to GitHub Client</h1>
+      <button class="cta-button" (click)="startwithlogin()">Get Started</button>
+    </header>
+  
+    <section class="features-section">
+      <div class="feature">
+        <img src="../../../../repository-github-client.png" alt="">
+        <h2>Explore Repositories</h2>
+        <p>Browse your repositories and find details easily.</p>
+        <button class="feature-button" (click)="openPopup('Explore Repositories')">Get Started</button>
+      </div>
+      <div class="feature">
+        <img src="../../../../user-github-client-image.png" alt="">
+        <h2>Track Users</h2>
+        <p>View and manage user information effectively.</p>
+        <button class="feature-button" (click)="openPopup('Track Users')">Get Started</button>
+      </div>
+      <div class="feature">
+        <img src="../../../../logout-github-image.jpg" alt="">
+        <h2>Secure Logout</h2>
+        <p>Quickly logout to keep your account secure.</p>
+        <button class="feature-button" (click)="openPopup('Secure Logout')">Get Started</button>
+      </div>
+    </section>
+  
+    <!-- Popup Section -->
+    <div class="popup" *ngIf="isPopupOpen">
+      <div class="popup-content">
+        <button class="close-button" (click)="closePopup()">×</button>
+        <h2>{{ popupTitle }}</h2>
+        <p> you dont login so you cant access this feature.</p>
+      </div>
+      <div class="popup-overlay" (click)="closePopup()"></div>
+    </div>
+  </div>
+  

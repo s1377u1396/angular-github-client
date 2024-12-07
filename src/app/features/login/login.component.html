@@ -1,0 +1,20 @@
+<div class="login-container">
+    <mat-card class="login-card">
+      <mat-card-title>Login to GitHub</mat-card-title>
+      <form (ngSubmit)="onSubmit()" [formGroup]="loginForm" class="login-form">
+        <mat-form-field appearance="fill">
+          <mat-label>GitHub Access Token</mat-label>
+          <input matInput formControlName="token" />
+          <mat-error *ngIf="loginForm.get('token')?.invalid">Token is required</mat-error>
+        </mat-form-field>
+        <button mat-raised-button color="primary" type="submit">Login</button>
+      </form>
+    </mat-card>
+  
+    <mat-card class="user-info-card" *ngIf="user">
+      <mat-card-title>User Info</mat-card-title>
+      <p><strong>Username:</strong> {{ user.login }}</p>
+      <p><strong>Profile:</strong> <a [href]="user.html_url" target="_blank">{{ user.html_url }}</a></p>
+    </mat-card>
+  </div>
+  

@@ -1,0 +1,261 @@
+
+  
+
+  /* Global Styles */
+.home-container {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0 auto;
+  }
+  
+  .hero-section {
+    background: url('../../../../public/header-github-client.webp') no-repeat center center;
+    background-size: cover; /* تصویر کل بخش را بپوشاند */
+    color: #fff;
+    padding: 50px 20px;
+  }
+
+  .main-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-top: -3%;
+    
+  }
+  
+  .subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  
+  .cta-button {
+    background-color: #ff9800;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+    margin-top: 15%;
+  }
+
+  .cta-button:hover {
+    background-color: #f18407f5;
+  }
+
+  .feature-button {
+    background-color: #18d664cb;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+    margin-top: 15%;
+  }
+  
+  .feature-button:hover {
+    background-color: #24ea1af0;
+  }
+  
+  /* Features Section */
+  .features-section {
+    display: flex;
+    justify-content: space-around;
+    padding: 30px;
+    background-color: #f5f5f5;
+  }
+  
+  .feature {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .feature img {
+    border-radius: 50%;
+    transition: ease-in-out 0.3s;
+  }
+  .feature img:hover {
+
+    transform: scale(1.1);
+  }
+  .feature:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .feature h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .feature p {
+    color: #666;
+    font-size: 1rem;
+  }
+  
+  /* استایل پاپ‌آپ */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  
+  .popup-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
+  
+  .popup-content {
+    position: relative;
+    z-index: 2;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 0.3s ease;
+  }
+  
+  .popup-content h2 {
+    margin-top: 0;
+    font-size: 1.5rem;
+    color: #ea0c0c;
+  }
+  
+  .popup-content p {
+    font-size: 1rem;
+    color: #e60d0d;
+    line-height: 1.5;
+  }
+  
+  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #333;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .close-button:hover {
+    color: #e74c3c;
+  }
+  
+  /* انیمیشن */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  /* استایل ریسپانسیو */
+
+/* برای نمایش‌های کوچکتر از 768px (موبایل) */
+@media (max-width: 768px) {
+    .features-section {
+      flex-direction: column; /* چینش عمودی */
+      padding: 10px;
+    }
+  
+    .feature {
+      margin-bottom: 20px; /* فاصله بین آیتم‌ها */
+    }
+  
+    .feature img {
+      width: 80px; /* کاهش اندازه تصویر */
+      height: 80px;
+    }
+  
+    .popup-content {
+      width: 90%; /* کاهش عرض پاپ‌آپ */
+      padding: 15px;
+    }
+  
+    .cta-button,
+    .feature-button {
+      width: 100%; /* دکمه‌ها تمام عرض شوند */
+      font-size: 0.9rem; /* کاهش اندازه فونت */
+    }
+  
+    .hero-section {
+      padding: 30px 10px;
+    }
+  
+    .main-title {
+      font-size: 2rem; /* کاهش اندازه متن عنوان */
+    }
+  }
+  
+  /* برای نمایش‌های کوچکتر از 480px (موبایل کوچک) */
+  @media (max-width: 480px) {
+    .features-section {
+      padding: 5px;
+    }
+  
+    .feature img {
+      width: 60px; /* کاهش بیشتر اندازه تصویر */
+      height: 60px;
+    }
+  
+    .main-title {
+      font-size: 1.5rem; /* کاهش اندازه عنوان */
+    }
+  
+    .cta-button {
+      font-size: 0.8rem; /* کاهش اندازه فونت دکمه */
+      padding: 8px 15px;
+    }
+  
+    .feature-button {
+      font-size: 0.8rem;
+      padding: 8px 15px;
+    }
+  }
+  
+  /* برای نمایش‌های بین 768px تا 1024px (تبلت) */
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .features-section {
+      flex-direction: column; /* چینش عمودی */
+    }
+  
+    .feature {
+      margin-bottom: 15px;
+    }
+  
+    .popup-content {
+      width: 70%; /* عرض متوسط برای تبلت */
+    }
+  
+    .cta-button,
+    .feature-button {
+      font-size: 1rem;
+    }
+  }
+  

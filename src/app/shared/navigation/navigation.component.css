@@ -1,0 +1,63 @@
+/* عمومی */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #fff;
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 16px;
+  }
+  
+  .nav-item {
+    position: relative;
+    text-transform: capitalize;
+    font-weight: 500;
+    color: #fff;
+  }
+  
+  .nav-item:hover .tooltip {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* لینک فعال */
+  .active-link {
+    color: #ffeb3b !important;
+    font-weight: bold;
+    border-bottom: 2px solid #ffeb3b;
+  }
+  
+  /* Tooltip */
+  .tooltip {
+    position: absolute;
+    bottom: -35px;
+    left: 0;
+    transform: translate(-50%, -10px);
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    white-space: nowrap;
+    pointer-events: none;
+  }
+  
+  /* انیمیشن لینک فعال */
+  .nav-item:hover {
+    color: #00e676 !important;
+  }
+  

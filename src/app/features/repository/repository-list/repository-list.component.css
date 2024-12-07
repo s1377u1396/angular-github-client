@@ -1,0 +1,82 @@
+/* استایل نوار جستجو */
+.search-bar {
+    height: auto;
+    background-color: #2c3e50; /* پس‌زمینه */
+    color: #ffffff; /* متن */
+    padding: 15px;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    align-items: center;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .search-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-color: #34495e; /* پس‌زمینه ورودی */
+    border-radius: 20px;
+    padding: 5px 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .search-input {
+    flex: 1; /* ورودی به اندازه باقی‌مانده فضا کشیده می‌شود */
+    border: none;
+    background: transparent;
+    color: #ecf0f1;
+    padding: 10px;
+    font-size: 16px;
+    outline: none; /* حذف حاشیه */
+  }
+  
+  .search-icon-button {
+    color: #1abc9c;
+  }
+  
+  .search-icon-button mat-icon {
+    font-size: 24px; /* اندازه آیکون */
+  }
+  
+  /* استایل برای کارت‌های مخازن */
+  .repository-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 20px;
+    justify-content: center;
+    margin-bottom: 3%;
+  }
+  
+  .repository-card {
+    width: 300px;
+  }
+  
+  .repository-card mat-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .repository-card mat-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* استایل برای بارگذاری و خطا */
+  .loading-spinner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .error-message {
+    color: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+  

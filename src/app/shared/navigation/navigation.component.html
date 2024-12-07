@@ -1,0 +1,42 @@
+<mat-toolbar color="primary" class="navbar">
+    <span class="logo" (click)="navigateTo('/')">GitHub Client</span>
+  
+    <!-- دکمه‌ها -->
+    <div class="nav-links">
+      <button
+        mat-button
+        *ngIf="token$ | async as token; else login"
+        [routerLink]="'/profile'"
+        routerLinkActive="active-link"
+        class="nav-item"
+      >
+        <span>Profile</span>
+        <div class="tooltip">Go to Profile</div>
+      </button>
+  
+      <button
+        mat-button
+        *ngIf="token$ | async as token;"
+        [routerLink]="'/repository'"
+        routerLinkActive="active-link"
+        class="nav-item"
+      >
+        <span>Repositories</span>
+        <div class="tooltip">View Repositories</div>
+      </button>
+  
+      <button mat-button color="warn" (click)="logout()" class="nav-item">
+        <span>Logout</span>
+        <div class="tooltip">Logout</div>
+      </button>
+    </div>
+  
+    <!-- لینک ورود -->
+    <ng-template #login>
+      <button mat-button [routerLink]="'/login'" class="nav-item">
+        <span>Login</span>
+        <div class="tooltip">Go to Login</div>
+      </button>
+    </ng-template>
+  </mat-toolbar>
+  
